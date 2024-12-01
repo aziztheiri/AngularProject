@@ -1,0 +1,21 @@
+<h1>List of Apartments</h1>
+<table border>
+  <tr>
+    <th>Apartment Number</th>
+    <th>Floor Number</th>
+    <th>Surface</th>
+    <th>Terrace</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let apartment of listApartments">
+    <td>{{ apartment.apartNum }}</td>
+    <td>{{ apartment.floorNum }}</td>
+    <td>{{ apartment.surface }}</td>
+    <td>{{ apartment.terrace ? 'Yes' : 'No' }}</td>
+    <td>
+      <button>Edit</button>
+    </td>
+  </tr>
+</table>
+
+<button (click)="createApartment()">Create Apartment</button>

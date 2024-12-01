@@ -1,0 +1,21 @@
+<table border>
+  <tr>
+    <td>Image</td>
+    <td>Id</td>
+    <td>Residence name</td>
+    <td>Status</td>
+    <td>Address</td>
+  </tr>
+  <tr *ngFor="let p of residenceItem">
+    <td><img [src]="p.image" alt="" width="50px" height="50px" /></td>
+    <td>{{ p.id }}</td>
+    <td>{{ p.name }}</td>
+    <td>{{ p.status }}</td>
+    <td>{{p.address}}</td>
+  </tr>
+</table>
+
+<button routerLink="/residences">Back to Residences List</button>
+<button (click)="goToNextResidence()">Next</button>
+<button (click)="goToAddResidence()">Add Residence</button>
+<button (click)="goToUpdateResidence()">Update Residence</button>

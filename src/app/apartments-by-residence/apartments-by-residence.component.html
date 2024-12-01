@@ -1,0 +1,22 @@
+<h1>List of Apartments for Residence {{ residenceId }}</h1>
+<table border>
+  <tr>
+    <th>Apartment Number</th>
+    <th>Floor Number</th>
+    <th>Surface</th>
+    <th>Terrace</th>
+    <th>Terrace Surface</th>
+    <th>Category</th>
+  </tr>
+  <tr *ngFor="let apartment of filteredApartments">
+    <td>{{ apartment.apartNum }}</td>
+    <td>{{ apartment.floorNum }}</td>
+    <td>{{ apartment.surface }} m²</td>
+    <td>{{ apartment.terrace ? 'Yes' : 'No' }}</td>
+    <td>{{ apartment.surfaceterrace }} m²</td>
+    <td>{{ apartment.category }}</td>
+  </tr>
+</table>
+
+<!-- Ajouter un lien pour revenir à la liste des résidences -->
+<a routerLink="/residences">Back to Residences</a>

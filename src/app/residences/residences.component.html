@@ -17,6 +17,8 @@
     
     <td><button type="button" class="btn btn-outline-primary" (click)="showLocation(item.address)">Show location</button>
         <button type="button" class="btn btn-outline-danger" (click)="addFavorite(item)">Like</button>
+        <button type="button" class="btn btn-outline-success" [routerLink]="['/residences',item.id]">Details</button>
+        <a [routerLink]="['/apartments/residence', item.id]">Appartements List</a>
 
     </td>
   </tr>
