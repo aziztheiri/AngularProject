@@ -14,7 +14,8 @@ export class ApartmentsComponent {
 
   constructor(private router: Router) {}
 
-  createApartment() {
-    this.router.navigate(['/create-apartment']); 
+  createApartment(residenceId: number) {
+    // Redirige vers le formulaire en passant l'ID de la résidence dans l'URL
+    this.router.navigate(['/apartmentsForm', residenceId]); 
   }
 }

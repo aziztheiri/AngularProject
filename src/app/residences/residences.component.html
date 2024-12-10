@@ -19,10 +19,11 @@
         <button type="button" class="btn btn-outline-danger" (click)="addFavorite(item)">Like</button>
         <button type="button" class="btn btn-outline-success" [routerLink]="['/residences',item.id]">Details</button>
         <a [routerLink]="['/apartments/residence', item.id]">Appartements List</a>
-
+      
     </td>
   </tr>
 </table>
+<button (click)="createResidence()">Create residence</button>
 
 <ul *ngFor="let favorite of favoris">
     <li >{{favorite.id}} - {{favorite.name}}</li>

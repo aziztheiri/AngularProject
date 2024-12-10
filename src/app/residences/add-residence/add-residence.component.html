@@ -1,1 +1,44 @@
-<p>add-residence works!</p>
+<form [formGroup]="addResidenceForm" (ngSubmit)="onSubmit()">
+    <!-- Champ caché pour l'ID -->
+    <input formControlName="id" type="hidden" />
+  
+    <!-- Nom de la résidence -->
+    <div>
+      <label for="name">Nom de la résidence</label>
+      <input id="name" formControlName="name" type="text" />
+      <div *ngIf="isFieldInvalid('name')">
+        <small>{{ getErrorMessage('name') }}</small>
+      </div>
+    </div>
+  
+    <!-- Adresse -->
+    <div>
+      <label for="address">Adresse</label>
+      <input id="address" formControlName="address" type="text" />
+      <div *ngIf="isFieldInvalid('address')">
+        <small>{{ getErrorMessage('address') }}</small>
+      </div>
+    </div>
+  
+    <!-- URL de l'image -->
+    <div>
+      <label for="image">URL de l'image</label>
+      <input id="image" formControlName="image" type="text" />
+      <div *ngIf="isFieldInvalid('image')">
+        <small>{{ getErrorMessage('image') }}</small>
+      </div>
+    </div>
+  
+    <!-- Statut -->
+    <div>
+      <label for="status">Statut</label>
+      <select id="status" formControlName="status">
+        <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+      </select>
+    </div>
+  
+    <!-- Bouton de soumission -->
+    <button type="submit" [disabled]="addResidenceForm.invalid">Ajouter</button>
+  </form>
+  
+  

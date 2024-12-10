@@ -1,0 +1,54 @@
+<form [formGroup]="apartForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="apartNum">Apartment Number</label>
+      <input id="apartNum" formControlName="apartNum" type="number" />
+      <div *ngIf="isFieldInvalid('apartNum')">
+        <small>{{ getErrorMessage('apartNum') }}</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="floorNum">Floor Number</label>
+      <input id="floorNum" formControlName="floorNum" type="number" />
+      <div *ngIf="isFieldInvalid('floorNum')">
+        <small>{{ getErrorMessage('floorNum') }}</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="surface">Surface</label>
+      <input id="surface" formControlName="surface" type="number" />
+      <div *ngIf="isFieldInvalid('surface')">
+        <small>{{ getErrorMessage('surface') }}</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="terrace">Terrace</label>
+      <input id="terrace" formControlName="terrace" type="checkbox" />
+    </div>
+  
+    <div *ngIf="apartForm.get('terrace')?.value">
+      <label for="surfaceterrace">Surface Terrace</label>
+      <input id="surfaceterrace" formControlName="surfaceterrace" type="number" />
+      <div *ngIf="isFieldInvalid('surfaceterrace')">
+        <small>{{ getErrorMessage('surfaceterrace') }}</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="category">Category</label>
+      <input id="category" formControlName="category" type="text" />
+      <div *ngIf="isFieldInvalid('category')">
+        <small>{{ getErrorMessage('category') }}</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="residenceId">Residence ID</label>
+      <input id="residenceId" formControlName="residenceId" type="number" [disabled]="true" />
+    </div>
+  
+    <button type="submit" [disabled]="apartForm.invalid">Add</button>
+  </form>
+  

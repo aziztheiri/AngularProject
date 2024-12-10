@@ -15,7 +15,8 @@
     <td>
       <button>Edit</button>
     </td>
+    <button (click)="createApartment(apartment.ResidenceId)">Add Apartment to Residence {{ apartment.ResidenceId }}</button>
+
   </tr>
 </table>
 
-<button (click)="createApartment()">Create Apartment</button>

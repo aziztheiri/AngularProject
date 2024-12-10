@@ -8,6 +8,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ResidenceDetailsComponentComponent } from './residences/residence-details-component/residence-details-component.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { ApartmentsByResidenceComponent } from './apartments-by-residence/apartments-by-residence.component';
+import { FormApartmentComponent } from './form-apartment/form-apartment.component';
+import { AddResidenceComponent } from './residences/add-residence/add-residence.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"home", pathMatch: 'full' },
@@ -18,6 +20,8 @@ const routes: Routes = [
  {path:"residences/:idR",component:ResidenceDetailsComponentComponent},
  { path: "apartments/residence/:residenceId",component:ApartmentsByResidenceComponent}, 
  {path:"apartments",component:ApartmentsComponent},
+ {path:"apartmentsForm/:residenceId",component:FormApartmentComponent},
+  {path:"addResidence",component:AddResidenceComponent},
  {path:"**",component:NotFoundComponent}
 ];
 

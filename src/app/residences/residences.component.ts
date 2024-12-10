@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Residence } from '../core/models/Residence';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-residences',
@@ -7,6 +8,7 @@ import { Residence } from '../core/models/Residence';
   styleUrls: ['./residences.component.css'],
 })
 export class ResidencesComponent {
+  constructor( private router: Router) {}
 
   search_item:string="";
   listResidences: Residence[] = [
@@ -58,5 +60,7 @@ export class ResidencesComponent {
 filtreByAddress(){
   return this.listResidences.filter(residance=> residance.address.toLowerCase().includes(this.search_item.toLowerCase()))
 }
-
+createResidence(){
+  this.router.navigate(['/addResidence']); 
+}
 }
