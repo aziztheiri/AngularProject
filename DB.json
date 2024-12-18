@@ -1,0 +1,123 @@
+{
+  "residences": [
+    {
+      "id": 1,
+      "name": "El fel",
+      "address": "Borj Cedria",
+      "image": "../../assets/images/R1.jpg",
+      "status": "Disponible"
+    },
+    {
+      "id": 2,
+      "name": "Test",
+      "address": "BH",
+      "image": "../../assets/images/R1.jpg",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    },
+    {
+      "id": 5,
+      "name": "Amitie",
+      "address": "Ariana0",
+      "image": "",
+      "status": "Disponible"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "pName": "souris",
+      "price": 200
+    }
+  ]
+}

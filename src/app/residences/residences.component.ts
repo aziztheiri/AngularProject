@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Residence } from '../core/models/Residence';
 import { Router } from '@angular/router';
+import { CommonService } from '../core/Services/common.service';
+import { ResidenceService } from '../core/Services/residence.service';
 
 @Component({
   selector: 'app-residences',
@@ -8,39 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./residences.component.css'],
 })
 export class ResidencesComponent {
-  constructor( private router: Router) {}
-
+  constructor( private router: Router ,private cc : CommonService,private rs : ResidenceService) {}
+  ngOnInit(){
+ 
+   // this.rs.deleteResidence(1).subscribe(res=>this.listResidences.filter==1))
+  console.log( this.cc.getSameValueOf(this.listResidences,"status","Disponible")) ;
+  this.rs.getResidenceList().subscribe(res=>this.listResidences=res)
+  }
   search_item:string="";
-  listResidences: Residence[] = [
-    {
-      id: 1,
-      name: 'El fel',
-      address: 'Borj Cedria',
-      image: '../../assets/images/R1.jpg',
-      status: 'Disponible',
-    },
-    {
-      id: 2,
-      name: 'El yasmine',
-      address: 'Ezzahra',
-      image: '../../assets/images/R2.jpg',
-      status: 'Disponible',
-    },
-    {
-      id: 3,
-      name: 'El Arij',
-      address: 'Rades',
-      image: '../../assets/images/R3.jpg',
-      status: 'Vendu',
-    },
-    {
-      id: 4,
-      name: 'El Anber',
-      address: 'inconnu',
-      image: '../../assets/images/R4.jpg',
-      status: 'En Construction',
-    },
-  ];
+  listResidences : Residence[]=[]
   favoris: Residence[] = [];
 
   showLocation(adress: string) {
@@ -63,4 +41,5 @@ filtreByAddress(){
 createResidence(){
   this.router.navigate(['/addResidence']); 
 }
+
 }

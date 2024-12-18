@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../core/Services/common.service';
 
 @Component({
   selector: 'app-product',
@@ -13,7 +14,10 @@ export class ProductComponent {
 //  onClick(){
 //   return alert("Vous avez cliquer!!!!!");
 //  }
-
+constructor(private cc : CommonService){}
+ngOnInit(){
+  console.log(this.cc.getSameValueOf(this.productList,"pName","PC"))
+}
 title: string = 'ProductList';
   color = 'red';
   productList = [
